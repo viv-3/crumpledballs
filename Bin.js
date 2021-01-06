@@ -7,12 +7,15 @@ constructor(x,y,width,height){
     this.width = width;
     this.height = height;
     World.add(world, this.body);
+
+    this.image = loadImage("dustbingreen.png")
   }
   display(){
     var pos = this.body.position;
-    rectMode(CENTER);
-    fill("red");
-    rect(pos.x, pos.y, this.width, this.height);
+    imageMode(CENTER);
+    image(this.image,pos.x,pos.y)
+    //fill("red");
+    //rect(pos.x, pos.y, this.width, this.height);
   }
 }
 
