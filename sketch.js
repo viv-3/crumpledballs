@@ -37,7 +37,7 @@ function setup() {
 
 function draw() {
   rectMode(CENTER);
-  keyPressed();
+  
   
   background(0);
   do1.display();
@@ -52,7 +52,7 @@ function draw() {
 
 function keyPressed(){
 	if (keyCode === UP_ARROW) {
-		Matter.Body.applyForce(paperObject.body,paperObject.body.position,{x:85,y:-85});
+		Matter.Body.applyForce(ball.body,ball.body.position,{x:40,y:-40});
 	}
 }
 
